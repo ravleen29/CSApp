@@ -63,6 +63,10 @@ namespace ConsoleAppProject.App01
 
                 string choice = Console.ReadLine();
 
+                if (choice != "1" && choice != "2" && choice != "3")
+                {
+                    throw new Exception("Invalid Choice");  
+                }
                 Console.WriteLine("Enter the number to convert a unit from one distance to another:");
                 if (choice == "1")
                 {
@@ -79,7 +83,7 @@ namespace ConsoleAppProject.App01
                 return null;
             }
 
-             int input(string prompt)
+            int input(string prompt)
             {
                 Console.WriteLine("Please, enter the number of  " + prompt);
                 return Convert.ToInt32(Console.ReadLine());
