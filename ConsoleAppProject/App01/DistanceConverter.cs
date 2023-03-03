@@ -4,10 +4,10 @@ using System.Security.Cryptography;
 namespace ConsoleAppProject.App01
 {
     /// <summary>
-    /// Please describe the main features of this App
+    /// converts three differentunit from one unit to another.
     /// </summary>
     /// <author>
-    /// Derek version 0.1
+    /// Ravleens version 0.1
     /// </author>
     public class DistanceConverter
     {
@@ -15,6 +15,8 @@ namespace ConsoleAppProject.App01
         const int Miles_To_Feet = 5280;
         const int Feet_To_Miles = 5280;
         const double Miles_To_Metres = 1609.34;
+        const double Metres_In_Miles = 0.000621371;
+        const double Feets_To_Meters = 0.3048;
         public double Miles;
         public double Feets;
         public double Metres;
@@ -52,9 +54,29 @@ namespace ConsoleAppProject.App01
                     Miles = Feets / Feet_To_Miles;
                     Console.WriteLine(Feets + " Feets is equal to " + Miles + " Miles.");
                 }
+                else if (To_distance == "Meters")
+                {
+                    Metres = Feets * Feets_To_Meters;
+                    Console.WriteLine(Feets + " Feets is equal to  " + Metres + " metres.");
+                }
+            }
+            else if (From_distance == "Meters")
+            {
+                Metres = input("metres");
+
+                if (To_distance == "Miles")
+                {
+                    Miles = Metres * Metres_In_Miles;
+                    Console.WriteLine(Metres + " Metres is equal to " + Miles + " Miles.");
+                }
+                else if (To_distance == "Feets")
+                {
+                    Feets = Metres / Feets_To_Meters;
+                    Console.WriteLine(Metres + " Metres is equal to " + Feets + " Feets.");
+                }
             }
 
-            string UnitMenu()
+             static string UnitMenu()
             {
                 Console.WriteLine("Choose the unit for the conversion process!");
                 Console.WriteLine("1. Miles");
@@ -65,7 +87,7 @@ namespace ConsoleAppProject.App01
 
                 if (choice != "1" && choice != "2" && choice != "3")
                 {
-                    throw new Exception("Invalid Choice");  
+                    throw new Exception("Invalid Choice");
                 }
                 Console.WriteLine("Enter the number to convert a unit from one distance to another:");
                 if (choice == "1")
@@ -78,15 +100,15 @@ namespace ConsoleAppProject.App01
                 }
                 else if (choice == "3")
                 {
-                    return "Miles";
+                    return "Meters";
                 }
                 return null;
             }
 
-            int input(string prompt)
+            Double input(string prompt)
             {
                 Console.WriteLine("Please, enter the number of  " + prompt);
-                return Convert.ToInt32(Console.ReadLine());
+                return Convert.ToDouble(Console.ReadLine());
             }
 
 

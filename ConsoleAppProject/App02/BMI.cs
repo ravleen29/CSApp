@@ -3,10 +3,10 @@
 namespace ConsoleAppProject.App02
 {
     /// <summary>
-    /// Please describe the main features of this App
+    /// Calculates BMI 
     /// </summary>
     /// <author>
-    /// Student Name version 0.1
+    /// Ravleens version 0.1
     /// </author>
 
     public class BMI
