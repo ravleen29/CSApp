@@ -64,6 +64,7 @@ namespace ConsoleAppProject.App02
             else
             {
                 Console.WriteLine("Enter you weight (in Kg): ");
+                
                 double kg = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine("Enter your Height (in m): ");
                 double height = Convert.ToDouble(Console.ReadLine());
