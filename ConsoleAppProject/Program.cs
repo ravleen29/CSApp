@@ -23,22 +23,26 @@ namespace ConsoleAppProject
             Console.WriteLine();
             Console.WriteLine(" =================================================");
             Console.WriteLine("    BNU CO453 Applications Programming 2022-2023! ");
-            Console.WriteLine(" =================================================");
+            Console.WriteLine("Distance Converter by Ravleen ");
 
-            Console.WriteLine("which app would yu like run?");
+            Console.WriteLine("which app would you like to run?");
             string App = Console.ReadLine();
-
-
-            if (App == "Distance Converter")
+           
+            if (App == "1")
             {
                 DistanceConverter converter = new DistanceConverter();
                 converter.run();
             }
-            else
+            else if (App == "2")
             {
                 BMI conversion = new BMI();
                 conversion.run();
-            }
+            } 
+            else
+            {
+                Console.WriteLine("Invalid Choice!");
+            } 
+
         }
     }
 }
