@@ -75,7 +75,7 @@ namespace ConsoleAppProject.App01
                     Console.WriteLine(Metres + " Metres is equal to " + Feets + " Feets.");
                 }
             }
-
+        }
              static string UnitMenu()
             {
                 Console.WriteLine("Choose the unit for the conversion process!");
@@ -112,6 +112,6 @@ namespace ConsoleAppProject.App01
             }
 
 
-        }
+        
     }
 }
