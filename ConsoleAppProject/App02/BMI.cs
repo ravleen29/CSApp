@@ -95,7 +95,10 @@ namespace ConsoleAppProject.App02
                 {
                     Console.WriteLine("Obese Class II");
                 }
-               
+                else if (BMI_result >= 40.0)
+                {
+                    Console.WriteLine("Obese Class III");
+                }
             }
 
         }
