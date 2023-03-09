@@ -24,11 +24,11 @@ namespace ConsoleAppProject
             Console.WriteLine(" =================================================");
             Console.WriteLine("    BNU CO453 Applications Programming 2022-2023! ");
             Console.WriteLine(" =================================================");
-            Console.WriteLine("Distance Converter by Ravleen ");
-
-            Console.WriteLine("which app would you like to run?");
+            Console.WriteLine("        Distance Converter by Ravleen             ");
+            Console.WriteLine(" =================================================");
+            Console.WriteLine("      Which app would you like to run?");
             string App = Console.ReadLine();
-           
+            Console.WriteLine("   You can now work in the selected application. That is ");
             if (App == "1")
             {
                 DistanceConverter converter = new DistanceConverter();
@@ -39,6 +39,11 @@ namespace ConsoleAppProject
                 BMI conversion = new BMI();
                 conversion.run();
             } 
+            else if (App == "3")
+            {
+                StudentGrades converter = new StudentGrades();
+                converter.run();
+            }
             else
             {
                 Console.WriteLine("Invalid Choice!");
