@@ -16,13 +16,14 @@ namespace ConsoleAppProject.App03
         public string LastName;
         public int Grades;
         public string A, B, C, D, F;
-        public const int Max_St = 10;
+        public const int Max_St = 4;
         public void run()
         {
             Console.WriteLine("    Student Grades application!   ");
             ConnvertToGrades();
             Name();
             GetStudentGrades();
+            
         }
 
         public string ConnvertToGrades()
@@ -52,11 +53,14 @@ namespace ConsoleAppProject.App03
         public void GetStudentGrades()
         {
             List<StudentGrades> studentGradesList = new List<StudentGrades>();
+            int min = int.MaxValue;
+            int max = int.MinValue;
+            double mean = 0;
             for (int i = 0; i < Max_St; i++)
             {
                 Console.WriteLine("Please enter student name: ");
                 string name = Console.ReadLine();
-                
+
                 StudentGrades sg = new StudentGrades()
                 {
                     FirstName = name,
@@ -65,13 +69,24 @@ namespace ConsoleAppProject.App03
                 int grades = Convert.ToInt32(Console.ReadLine());
                 sg.Grades = grades;
                 studentGradesList.Add(sg);
+
+                if (grades > max)
+                    max = grades;
+                if (grades < min)
+                    min = grades;
+                mean += grades;
             }
+            mean = mean / studentGradesList.Count;
+
+            Console.WriteLine("The list of student names and grades.");
             foreach (StudentGrades sg in studentGradesList)
             {
                 Console.WriteLine($"{sg.Name()} Grade: {sg.ConnvertToGrades()}");
             }
+
+            Console.WriteLine("The average , minimum and maximum marks are: ");
+            Console.WriteLine($"Mean: {mean}, Min: {min}, Max: {max}");
         }
-
-
+        
     }
 }
