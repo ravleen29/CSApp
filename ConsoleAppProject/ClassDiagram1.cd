@@ -14,5 +14,12 @@
       <FileName>App01\DistanceConverter.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="ConsoleAppProject.App03.StudentGrades">
+    <Position X="6.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAkAAQAAEAAAAAAAAAAQAAAAAIAAAAAAAtAEAAAg=</HashCode>
+      <FileName>App03\StudentGrades.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

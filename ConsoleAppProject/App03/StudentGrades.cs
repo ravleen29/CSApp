@@ -7,8 +7,7 @@ using ConsoleAppProject.Helpers;
 namespace ConsoleAppProject.App03
 {
     /// <summary>
-    /// At the moment this class just tests the
-    /// Grades enumeration names and descriptions
+    /// The application converts the marks intogrades and displays a list and mean, minimum and maximum marks.
     /// </summary>
     public class StudentGrades
     {
@@ -16,7 +15,7 @@ namespace ConsoleAppProject.App03
         public string LastName;
         public int Grades;
         public string A, B, C, D, F;
-        public const int Max_St = 4;
+        public const int Max_St = 10;
         public void run()
         {
             Console.WriteLine("    Student Grades application!   ");
