@@ -20,18 +20,28 @@ namespace ConsoleAppProject.App04
     ///</author> 
     public class NewsFeed
     {
+        public void run()
+        {
+            NewsFeed newsFeed = new NewsFeed();
+            PhotoPost photo1 = new PhotoPost("ravleen.jpg", "My Summer Vacation");
+            MessagePost message1 = new MessagePost("I had a great time!");
+            newsFeed.AddPhotoPost(photo1);
+            newsFeed.AddMessagePost(message1);
+            newsFeed.Display();
+        }
         private readonly List<MessagePost> messages;
         private readonly List<PhotoPost> photos;
 
         ///<summary>
         /// Construct an empty news feed.
         ///</summary>
+       
+       
         public NewsFeed()
         {
             messages = new List<MessagePost>();
             photos = new List<PhotoPost>();
         }
-
 
         ///<summary>
         /// Add a text post to the news feed.
@@ -73,6 +83,7 @@ namespace ConsoleAppProject.App04
                 Console.WriteLine();   // empty line between posts
             }
         }
+
     }
 
 }

@@ -1,7 +1,8 @@
 ﻿using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
 using ConsoleAppProject.App03;
-using ConsoleAppProject.Helpers;
+using ConsoleAppProject.App04;
+using ConsoleAppProject.Helpers; 
 using System;
 
 namespace ConsoleAppProject
@@ -43,6 +44,11 @@ namespace ConsoleAppProject
             {
                 StudentGrades converter = new StudentGrades();
                 converter.run();
+            }
+            else if (App == "4")
+            { 
+              NewsFeed convert= new NewsFeed();
+                convert.run();
             }
             else
             {
