@@ -12,7 +12,7 @@ namespace ConsoleAppProject.App04
     /// Michael Kölling and David J. Barnes
     /// version 0.1
     /// </author>
-    public class MessagePost
+    public class MessagePost : Post
     {
         // an arbitrarily long, multi-line message
         public String Message { get; }
@@ -27,26 +27,13 @@ namespace ConsoleAppProject.App04
         /// <param name="text">
         /// The text of this post.
         /// </param>
-        public MessagePost(String text)
+        public MessagePost(String author,String text): base (author)
         {
             Message = text;
         }
 
 
-        ///<summary>
-        /// Display the details of this post.
-        /// 
-        /// (Currently: Print to the text terminal. This is simulating display 
-        /// in a web browser for now.)
-        ///</summary>
-        public void Display()
-        {
-            Console.WriteLine("Display from message post.");
-            Console.WriteLine($"    Message: {Message}");
-            Console.WriteLine();
-
-           
-        }
+       
 
         
     }

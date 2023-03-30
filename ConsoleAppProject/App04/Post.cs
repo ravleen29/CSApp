@@ -19,12 +19,13 @@ namespace ConsoleAppProject.App04
             protected readonly List<String> comments;
             public Post(String author)
             {
-               Username = author;
+               this.Username = author;
                Timestamp = DateTime.Now;
 
                likes = 0;
                comments = new List<String>();
             }
+            
 
             /// <summary>
             /// Record one more 'Like' indication from a user.

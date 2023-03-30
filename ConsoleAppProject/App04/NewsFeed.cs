@@ -20,17 +20,12 @@ namespace ConsoleAppProject.App04
     ///</author> 
     public class NewsFeed
     {
-        public void run()
+        public void Run()
         {
-            NewsFeed newsFeed = new NewsFeed();
-            PhotoPost photo1 = new PhotoPost("ravleen.jpg", "My Summer Vacation");
-            MessagePost message1 = new MessagePost("I had a great time!");
-            newsFeed.AddPhotoPost(photo1);
-            newsFeed.AddMessagePost(message1);
-            newsFeed.Display();
+            
         }
-        private readonly List<MessagePost> messages;
-        private readonly List<PhotoPost> photos;
+        private readonly List<Post> posts;
+        
 
         ///<summary>
         /// Construct an empty news feed.
@@ -39,8 +34,7 @@ namespace ConsoleAppProject.App04
        
         public NewsFeed()
         {
-            messages = new List<MessagePost>();
-            photos = new List<PhotoPost>();
+            posts = new List<Post>();          
         }
 
         ///<summary>
@@ -50,7 +44,7 @@ namespace ConsoleAppProject.App04
         ///</summary>
         public void AddMessagePost(MessagePost message)
         {
-            messages.Add(message);
+            posts.Add(message);
         }
 
         ///<summary>
@@ -60,7 +54,7 @@ namespace ConsoleAppProject.App04
         ///</summary>
         public void AddPhotoPost(PhotoPost photo)
         {
-            photos.Add(photo);
+            posts.Add(photo);
         }
 
         ///<summary>
@@ -70,16 +64,9 @@ namespace ConsoleAppProject.App04
         public void Display()
         {
             // display all text posts
-            foreach (MessagePost message in messages)
+            foreach (Post post in posts)
             {
-                message.Display();
-                Console.WriteLine();   // empty line between posts
-            }
-
-            // display all photos
-            foreach (PhotoPost photo in photos)
-            {
-                photo.Display();
+                post.Display();
                 Console.WriteLine();   // empty line between posts
             }
         }

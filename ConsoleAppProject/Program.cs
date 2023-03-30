@@ -46,9 +46,9 @@ namespace ConsoleAppProject
                 converter.run();
             }
             else if (App == "4")
-            { 
-              NewsFeed convert= new NewsFeed();
-                convert.run();
+            {
+                NewsFeed newsFeed = new NewsFeed(); 
+                newsFeed.Run();
             }
             else
             {
