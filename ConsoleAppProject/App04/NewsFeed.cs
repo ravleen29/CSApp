@@ -20,10 +20,7 @@ namespace ConsoleAppProject.App04
     ///</author> 
     public class NewsFeed
     {
-        public void Run()
-        {
-            
-        }
+        public const string AUTHOR = "Ravleen";
         private readonly List<Post> posts;
         
 
@@ -34,7 +31,13 @@ namespace ConsoleAppProject.App04
        
         public NewsFeed()
         {
-            posts = new List<Post>();          
+            posts = new List<Post>();
+
+            MessagePost post = new MessagePost(AUTHOR, "I love travelling.");
+            AddMessagePost(post);
+
+            PhotoPost photoPost = new PhotoPost(AUTHOR, "rav.jpg", "Sunny Day!");
+            AddPhotoPost(photoPost);
         }
 
         ///<summary>
@@ -69,6 +72,27 @@ namespace ConsoleAppProject.App04
                 post.Display();
                 Console.WriteLine();   // empty line between posts
             }
+        }
+
+        
+
+      // Method to display all posts by a particular author
+        public void DisplayPostsByAuthor(string author)
+        {
+            foreach (Post post in posts)
+            {
+                if (post.Username == author)
+                {
+                    post.Display();
+                    Console.WriteLine();   // empty line between posts
+                }
+            }
+        }
+
+        // Method to remove a particular post
+        public void RemovePost(Post post)
+        {
+            posts.Remove(post);
         }
 
     }

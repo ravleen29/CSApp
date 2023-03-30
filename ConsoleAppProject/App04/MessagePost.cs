@@ -33,7 +33,20 @@ namespace ConsoleAppProject.App04
         }
 
 
-       
+        ///<summary>
+        /// Display the details of this post.
+        /// 
+        /// (Currently: Print to the text terminal. This is simulating display 
+        /// in a web browser for now.)
+        ///</summary>
+        public override void Display()
+        {
+            Console.WriteLine("Display from message post.");
+            Console.WriteLine($"    Message: {Message}");
+            Console.WriteLine();
+
+           base.Display();  
+        }
 
         
     }
