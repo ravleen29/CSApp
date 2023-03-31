@@ -14,7 +14,7 @@ namespace ConsoleAppProject.App04
 
              public DateTime Timestamp { get; }
 
-             protected int likes;
+             public int likes;
 
             protected readonly List<String> comments;
             public Post(String author)

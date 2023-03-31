@@ -42,6 +42,8 @@ namespace ConsoleAppProject.App04
 
         }
 
+        
+
         ///<summary>
         /// Display the details of this post.
         /// 

@@ -7,57 +7,47 @@ namespace ConsoleAppProject.App04
 {
     public class NetworkApp
     {
-        protected NewsFeed news = new NewsFeed();
-        public void DisplayMenu()
+        private NewsFeed news = new NewsFeed();
+        
+        public void DispalyMenu()
         {
-            Console.WriteLine("Ravleen's Newsfeed!");
+            Console.WriteLine("which app you want to open");
+            Console.WriteLine(" Select any of the number : ");
+            Console.WriteLine("1. message post");
+            Console.WriteLine("2. photo post");
+            Console.WriteLine("3. Display all posts");
 
-            string[] choices = new string[]
+            Console.WriteLine("Please Enter any number");
+            string choice = Console.ReadLine();
+            if (choice == "1")
             {
-                "Post Message", "Post Image", "" +
-                "DisplayMenu All Posts", "Remove Post",  "Quit"
-            };
-
-            bool wantToQuit = false;
-            do
-            {
-                int choice = ConsoleHelper.SelectChoice(choices);
-
-                switch (choice)
-                {
-                    case 1: PostMessage(); break;
-                    case 2: PostImage(); break;
-                    case 3: DisplayAll(); break;
-                    case 4: RemovePost(); break;
-                    case 7: wantToQuit = true; break;
-                }
+                postMessage();
             }
-            while (!wantToQuit);
+            else if (choice == "2")
+            {
+                PostPhoto();
+            }
+            else
+            {
+                postAll();
+            }
+
         }
 
-        private void RemovePost()
+        private void postAll()
         {
-            throw new NotImplementedException();
+            news.Display();
+
         }
 
-        public void RemovePost(Post post)
-        {
-            news.RemovePost(post);
-        }
-
-        private void DisplayAll()
+        private void PostPhoto()
         {
             news.Display();
         }
 
-        private void PostImage()
+        private void postMessage()
         {
-            throw new NotImplementedException();
-        }
-
-        private void PostMessage()
-        {
-            throw new NotImplementedException();
+            news.Display();
         }
     }
 }

@@ -52,8 +52,9 @@ namespace ConsoleAppProject
             {
                 Console.WriteLine("Social Network");
                 NetworkApp convert = new NetworkApp();
-                convert.DisplayMenu();
-                
+                convert.DispalyMenu();
+
+
             }
             else
             {
